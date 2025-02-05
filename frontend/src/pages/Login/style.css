@@ -1,0 +1,152 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+}
+
+.root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.imageSide {
+  flex: 1;
+  background: url('https://whaticket.com/pt/wp-content/uploads/2023/10/Elemento_Home_BR.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.formSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.logoImg {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 150px;
+  height: auto;
+}
+
+.submitBtn {
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #45a049;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.registerBtn {
+  background-color: #096799;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  width: 48%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registerBtn:hover {
+  background-color: #075d77;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.passwordStrengthBar {
+  margin-top: 10px;
+}
+
+.passwordStrengthText {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* WhatsApp Button Styling */
+.whatsappButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* WhatsApp green */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: bounce 1s infinite;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.whatsappButton:hover {
+  background-color: #128c7e; /* Hover color */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.whatsappIcon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .root {
+    flex-direction: column;
+  }
+
+  .imageSide, .formSide {
+    width: 100%;
+    flex: none;
+  }
+
+  .formContainer {
+    padding: 20px;
+  }
+}
